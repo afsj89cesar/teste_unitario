@@ -43,7 +43,7 @@ class TestServiceUser:
     def test_add_user_campos_em_branco(self, none=None):
         #Setup
         service = ServiceUser()
-        resultado_esperado = "Requer preenchimento dos campos"
+        resultado_esperado = "necessário preencher os campos"
         service.add_user(none, none)
 
         #Chamada
@@ -69,7 +69,7 @@ class TestServiceUser:
     def test_remover_useuario_nao_cadastrado(self):
         #setup
         service = ServiceUser()
-        resultado_esperado = "Não foi possível remover o usuário Bento, já que ele não foi encontrado!"
+        resultado_esperado = "Não foi possível remover o usuário Bento, usuário não encontrado!"
         service.remove_user("Adalberto")
 
         #Chamada
